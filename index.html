@@ -1,18 +1,38 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hello</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-Hello World
-</body>
+<div id="wel">
+    Hello World
+</div>
+<iframe id="iframe" src=""></iframe>
 <script>
-    url = window.location.href;
-    url = "alanbick";
-    if(url.indexOf("alanbick") > -1){
-        window.location.href = "./alanbick/index.html"
+    var url = window.location.href;
+    var iframe = document.getElementById("iframe");
+    var div = document.getElementById("wel");
+    if (url.indexOf("alanbick") > -1) {
+        div.style.display = "none";
+        iframe.src = "https://alanbick.co.uk/";
+        document.title = "Home - Alan Bick | Hatton Garden Jewellers - Est. 1968"
     }
-
+    else if (url.indexOf("wearefoolish") > -1) {
+        div.style.display = "none";
+        iframe.src = "https://www.wearefoolish.co.uk/";
+        document.title = "Luxury Clothing - Timeless Essentials | We Are Foolish"
+    }
 </script>
+</body>
 </html>
