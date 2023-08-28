@@ -33,50 +33,51 @@
     </style>
 </head>
 <body>
-<div id="wel">
-    Hello World
-</div>
+<div id="wel"></div>
 <iframe id="iframe" src=""></iframe>
-<div id="content"></div>    
+<div id="content"></div>
 <script id="redirectscr">
     var url = window.location.href;
     var iframe = document.getElementById("iframe");
-    var div = document.getElementById("wel");
-    if (url.indexOf("alanbick") > -1) {
-        div.style.display = "none";
-        iframe.src = "https://alanbick.co.uk/";
-        document.title = "Home - Alan Bick | Hatton Garden Jewellers - Est. 1968"
-        fillContent("alanbick.html")
-    }
-    else if (url.indexOf("wearefoolish") > -1) {
-        div.style.display = "none";
-        iframe.src = "https://www.wearefoolish.co.uk/";
-        document.title = "Luxury Clothing - Timeless Essentials | We Are Foolish"
-    }
-    else if (url.indexOf("comfyysleeps") > -1) {
-        div.style.display = "none";
-        iframe.src = "https://comfyysleeps.co.uk/";
-        document.title = "Get 15% OFF on Ottoman Storage Bed - Comfyy Sleep"
-        fillContent("comfyysleeps.html")
-    }
-
-    function fillContent(name){
-        fetch('../content/' + name)
-            .then(function(response) {
-                if (response.ok) {
-                    return response.text();
+    url = url.replace("https://","").replace("http://","").replace("www.","").replace(".co.uk","").replace(".com","").replace("/", "");
+    (async () => {
+        await fillSrc(url);
+        async function fillSrc(name) {
+            try {
+                const response = await fetch('../content/' + name + ".url");
+                if (!response.ok) {
+                    throw new Error('Failed to load');
                 }
-                throw new Error('Failed to load');
+                const text = await response.text();
+                iframe.src = text;
+            } catch (error) {
+            } finally {
+            }
+        }
+        fillContent(url)
+        function fillContent(name){
+            fetch('../content/' + name)
+                .then(function(response) {
+                    if (response.ok) {
+                        return response.text();
+                    }
+                    throw new Error('Failed to load');
+                })
+                .then(function(templateHtml) {
+                    const regex = /<title>(.*?)<\/title>/;
+                    const match = templateHtml.match(regex);
+                    const title = match[1];
+                    document.title = title;
+                    document.getElementById("content").innerHTML = templateHtml.replace(/<head>[\s\S]*<\/head>/i, '');
+                })
+                .catch(function(error) {
+                }).finally(function (){
+                var script = document.getElementById("redirectscr");
+                script.remove();
             })
-            .then(function(templateHtml) {
-                document.getElementById("content").innerHTML = templateHtml.replace(/<head>[\s\S]*<\/head>/i, '');
-            })
-            .catch(function(error) {
-            }).finally(function (){
-            var script = document.getElementById("redirectscr");
-            script.remove();
-        })
-    }
+        }
+    })();
+
 
 </script>
 <script type="text/javascript">
