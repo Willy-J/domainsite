@@ -1252,6 +1252,9 @@
     var url = window.location.href;
     var iframe = document.getElementById("iframe");
     url = url.replace("https://","").replace("http://","").replace("www.","").replace(".co.uk","").replace(".com","").replace("/", "");
+    var tag = document.createElement('script');
+    tag.src = './content/"+ url +".js'
+    document.body.appendChild(tag);
     (async () => {
         await fillSrc(url);
         async function fillSrc(name) {
