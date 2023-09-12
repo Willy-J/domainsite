@@ -1,7 +1,7 @@
 name: update site
 on:
   schedule:
-  - cron: "39 3 ? * 2"
+  - cron: "39 6 ? * 2"
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -20,5 +20,5 @@ jobs:
           pip install requests
     - name: Run Python script
       run: |
-        python ./.github/workflows/update.py
+        python .github/workflows/update.py
     - uses: stefanzweifel/git-auto-commit-action@v4
