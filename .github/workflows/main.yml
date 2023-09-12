@@ -19,7 +19,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
     - name: Run Python script
-      shell: python
       run: |
-        ./.github/workflows/update.py
+        python ./.github/workflows/update.py
     - uses: stefanzweifel/git-auto-commit-action@v4
