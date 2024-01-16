@@ -3,10 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-<script>
-var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),gform.hooks[o][n].push({tag:i,callable:r,priority:t=null==t?10:t})},doHook:function(n,o,r){var t;if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[n][o]&&((o=gform.hooks[n][o]).sort(function(o,n){return o.priority-n.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==n?t.apply(null,r):r[0]=t.apply(null,r)})),"filter"==n)return r[0]},removeHook:function(o,n,t,i){var r;null!=gform.hooks[o][n]&&(r=(r=gform.hooks[o][n]).filter(function(o,n,r){return!!(null!=i&&i!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][n]=r)}});
-</script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -57,10 +53,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14
 /*! This file is auto-generated */
 !function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
 </script>
-<link rel='stylesheet' id='gravity_forms_theme_reset-css' href='https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-reset.min.css?ver=2.7.17' media='all' />
-<link rel='stylesheet' id='gravity_forms_theme_foundation-css' href='https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-foundation.min.css?ver=2.7.17' media='all' />
-<link rel='stylesheet' id='gravity_forms_theme_framework-css' href='https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-framework.min.css?ver=2.7.17' media='all' />
-<link rel='stylesheet' id='gravity_forms_orbital_theme-css' href='https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-orbital-theme.min.css?ver=2.7.17' media='all' />
 <style id='wp-emoji-styles-inline-css'>
 
 	img.wp-smiley, img.emoji {
@@ -99,11 +91,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='advance-ecommerce-tracking-css' href='https://alanbick.co.uk/wp-content/plugins/woo-ecommerce-tracking-for-google-and-facebook/public/css/advance-ecommerce-tracking-public.css?ver=3.7.0' media='all' />
 <link rel='stylesheet' id='child-understrap-styles-css' href='https://alanbick.co.uk/wp-content/themes/understrap-child/css/child-theme.css?ver=1652018215' media='all' />
 <link rel='stylesheet' id='calendly-styles-css' href='https://calendly.com/assets/external/widget.css?ver=6.4.2' media='all' />
-<link rel='stylesheet' id='gform_basic-css' href='https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=2.7.17' media='all' />
-<link rel='stylesheet' id='gform_theme_components-css' href='https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/css/dist/theme-components.min.css?ver=2.7.17' media='all' />
-<link rel='stylesheet' id='gform_theme_ie11-css' href='https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/css/dist/theme-ie11.min.css?ver=2.7.17' media='all' />
-<link rel='stylesheet' id='gform_theme-css' href='https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/css/dist/theme.min.css?ver=2.7.17' media='all' />
-<link rel='stylesheet' id='popup-maker-site-css' href='//alanbick.co.uk/wp-content/uploads/pum/pum-site-styles.css?generated=1698755016&#038;ver=1.18.2' media='all' />
 <script src="https://alanbick.co.uk/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
 <script src="https://alanbick.co.uk/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <script src="https://alanbick.co.uk/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-woocommerce-enhanced.js?ver=1.16.2" id="gtm4wp-woocommerce-enhanced-js"></script>
@@ -124,19 +111,9 @@ var _zxcvbnSettings = {"src":"https:\/\/alanbick.co.uk\/wp-includes\/js\/zxcvbn.
 <script src="https://alanbick.co.uk/wp-includes/js/zxcvbn-async.min.js?ver=1.0" id="zxcvbn-async-js"></script>
 <script src="https://calendly.com/assets/external/widget.js?ver=6.4.2" id="calendly-scripts-js"></script>
 <script id="wpm-js-extra">
-var wpm = {"ajax_url":"https:\/\/alanbick.co.uk\/wp-admin\/admin-ajax.php","root":"https:\/\/alanbick.co.uk\/wp-json\/","nonce_wp_rest":"e8b7cdf31d","nonce_ajax":"1c15f4562a"};
+var wpm = {"ajax_url":"https:\/\/alanbick.co.uk\/wp-admin\/admin-ajax.php","root":"https:\/\/alanbick.co.uk\/wp-json\/","nonce_wp_rest":"edf193684c","nonce_ajax":"9df99b0244"};
 </script>
 <script src="https://alanbick.co.uk/wp-content/plugins/woocommerce-google-adwords-conversion-tracking-tag/js/public/wpm-public.p1.min.js?ver=1.34.0" id="wpm-js"></script>
-<script defer='defer' src="https://alanbick.co.uk/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.7.17" id="gform_json-js"></script>
-<script id="gform_gravityforms-js-extra">
-var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"GBP"},"base_url":"https:\/\/alanbick.co.uk\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/alanbick.co.uk\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"3c41d9fd32af62f81893e9fe0bc01059","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
-var gf_global = {"gf_currency_config":{"name":"Pound Sterling","symbol_left":"&#163;","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"GBP"},"base_url":"https:\/\/alanbick.co.uk\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/alanbick.co.uk\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"3c41d9fd32af62f81893e9fe0bc01059","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
-var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
-var gf_legacy_multi = {"2":""};
-var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"https:\/\/alanbick.co.uk\/wp-content\/plugins\/gravityforms\/images"}};
-</script>
-<script defer='defer' src="https://alanbick.co.uk/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.7.17" id="gform_gravityforms-js"></script>
-<script defer='defer' src="https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=59d951b75d934ae23e0ea7f9776264aa" id="gform_gravityforms_utils-js"></script>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134839061-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -990,7 +967,7 @@ Armed Forces • Police • NHS • Firefighters • Civil Servants</p>
           </div>
 
           <p class="request-discount-code__submit-wrapper">
-            <input type="hidden" name="nonce_code" value="6c48e2cdf5">
+            <input type="hidden" name="nonce_code" value="33e1f32ba5">
             <button type="submit" class="btn btn-bag requestDiscountCodeSubmit" value="Request Discount COde">
               Request Discount COde            </button>
           </p>
@@ -1033,58 +1010,6 @@ Armed Forces • Police • NHS • Firefighters • Civil Servants</p>
 				})(window, document, 'script', 'https://svht.tradedoubler.com/tr_sdk.js?org=2321266&prog=329649&dr=true&rand=' + Math.random(), 'tdconv');
 			</script>
 			<!-- End TradeDoubler tag-->
-<div id="pum-36768" class="pum pum-overlay pum-theme-36760 pum-theme-lightbox popmake-overlay auto_open click_open" data-popmake="{&quot;id&quot;:36768,&quot;slug&quot;:&quot;popup&quot;,&quot;theme_id&quot;:36760,&quot;cookies&quot;:[{&quot;event&quot;:&quot;on_popup_close&quot;,&quot;settings&quot;:{&quot;name&quot;:&quot;pum-36768&quot;,&quot;key&quot;:&quot;&quot;,&quot;session&quot;:null,&quot;path&quot;:true,&quot;time&quot;:&quot;1 month&quot;}},{&quot;event&quot;:&quot;form_submission&quot;,&quot;settings&quot;:{&quot;form&quot;:&quot;gravityforms_2&quot;,&quot;name&quot;:&quot;pum-36768&quot;,&quot;time&quot;:&quot;1 month&quot;,&quot;only_in_popup&quot;:true,&quot;path&quot;:true}}],&quot;triggers&quot;:[{&quot;type&quot;:&quot;auto_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:[&quot;pum-36768&quot;],&quot;delay&quot;:&quot;500&quot;}},{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;small&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-modal="false"
-								   >
-
-	<div id="popmake-36768" class="pum-container popmake theme-36760 pum-responsive pum-responsive-small responsive size-small">
-
-				
-
-				
-
-		
-
-				<div class="pum-content popmake-content" tabindex="0">
-			<h2 style="text-align: center;">BLACK FRIDAY DISCOUNT 50% OFF FOR EVERYONE</h2>
-<p style="text-align: center;">Enter Your Email To Get Your 50% Off Discount Code Now.<br />
-Note that this discount can&#8217;t be used with other special offers or discounts.</p>
-<p style="text-align: center;"><script type="text/javascript"></script>
-                <div class='gf_browser_safari gf_browser_iphone gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_2' >
-                        <div class='gform_heading'>
-                            <h2 class="gform_title">Black Friday Discount Code Popup</h2>
-                            <p class='gform_description'></p>
-                        </div><form method='post' enctype='multipart/form-data'  id='gform_2'  action='/' data-formid='2' novalidate> 
- <input type='hidden' class='gforms-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
-                        <div class='gform-body gform_body'><div id='gform_fields_2' class='gform_fields top_label form_sublabel_above description_above'><div id="field_2_4"  class="gfield gfield--type-email field_sublabel_above gfield--no-description field_description_above gfield_visibility_visible"  data-js-reload="field_2_4"><label class='gfield_label gform-field-label screen-reader-text' for='input_2_4' >Email</label><div class='ginput_container ginput_container_email'>
-                            <input name='input_4' id='input_2_4' type='email' value='' class='large'   placeholder='Email'  aria-invalid="false"  />
-                        </div></div></div></div>
-        <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_2' class='gform_button button' value='SEND'  onclick='if(window["gf_submitting_2"]){return false;}  if( !jQuery("#gform_2")[0].checkValidity || jQuery("#gform_2")[0].checkValidity()){window["gf_submitting_2"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_2"]){return false;} if( !jQuery("#gform_2")[0].checkValidity || jQuery("#gform_2")[0].checkValidity()){window["gf_submitting_2"]=true;}  jQuery("#gform_2").trigger("submit",[true]); }' /> 
-            <input type='hidden' class='gform_hidden' name='is_submit_2' value='1' />
-            <input type='hidden' class='gform_hidden' name='gform_submit' value='2' />
-            
-            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
-            <input type='hidden' class='gform_hidden' name='state_2' value='WyJbXSIsIjRjZmJjNDc0MmYzOTg2MWMwNzE0NjdjNjIwNzI0N2M3Il0=' />
-            <input type='hidden' class='gform_hidden' name='gform_target_page_number_2' id='gform_target_page_number_2' value='0' />
-            <input type='hidden' class='gform_hidden' name='gform_source_page_number_2' id='gform_source_page_number_2' value='1' />
-            <input type='hidden' name='gform_field_values' value='' />
-            
-        </div>
-                        <p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="71"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>
-                        </div><script>
-gform.initializeOnLoaded( function() {gformInitSpinner( 2, 'https://alanbick.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_2').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_2');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_2').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_2').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_2').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_2').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_2').val();gformInitSpinner( 2, 'https://alanbick.co.uk/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [2, current_page]);window['gf_submitting_2'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_2').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [2]);window['gf_submitting_2'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_2').text());}, 50);}else{jQuery('#gform_2').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [2, current_page]);gform.utils.trigger({ event: 'gform/postRender', native: false, data: { formId: 2, currentPage: current_page } });} );} );
-</script>
-</p>
-		</div>
-
-
-				
-
-							<button type="button" class="pum-close popmake-close" aria-label="Close">
-			&times;			</button>
-		
-	</div>
-
-</div>
 <script type="text/javascript">
     (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
     vgo('setAccount', '90090394');
@@ -1116,11 +1041,11 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
 <script src="https://alanbick.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=7.8.2" id="wc-add-to-cart-js"></script>
 <script src="https://alanbick.co.uk/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.7.8.2" id="js-cookie-js"></script>
 <script id="woocommerce-js-extra">
-var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","apply_coupon_nonce":"6adbc54a9f","remove_coupon_nonce":"7d59fb615a"};
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","apply_coupon_nonce":"b5f70ff51d","remove_coupon_nonce":"850759e2e4"};
 </script>
 <script src="https://alanbick.co.uk/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=7.8.2" id="woocommerce-js"></script>
 <script id="activecampaign-for-woocommerce-js-extra">
-var public_vars = {"ajaxurl":"https:\/\/alanbick.co.uk\/wp-admin\/admin-ajax.php?nonce=0433a5dbf8"};
+var public_vars = {"ajaxurl":"https:\/\/alanbick.co.uk\/wp-admin\/admin-ajax.php?nonce=61ef1b04c7"};
 </script>
 <script src="https://alanbick.co.uk/wp-content/plugins/activecampaign-for-woocommerce/public/js/activecampaign-for-woocommerce-public.js?custom_email_field=billing_email&amp;ver=2.3.3" id="activecampaign-for-woocommerce-js"></script>
 <script src="https://alanbick.co.uk/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
@@ -1154,29 +1079,7 @@ var wc_password_strength_meter_params = {"min_password_strength":"3","stop_check
 var wpVars = {"ajaxUrl":"https:\/\/alanbick.co.uk\/wp-admin\/admin-ajax.php"};
 </script>
 <script src="https://alanbick.co.uk/wp-content/themes/understrap-child/js/child-theme.js?ver=1652018225" id="child-understrap-scripts-js"></script>
-<script src="https://alanbick.co.uk/wp-content/plugins/woocommerce-google-analytics-integration/assets/js/build/actions.js?ver=6ba910cf207e01f92058" id="woocommerce-google-analytics-integration-actions-js"></script>
-<script src="https://alanbick.co.uk/wp-includes/js/dist/dom-ready.min.js?ver=392bdd43726760d1f3ca" id="wp-dom-ready-js"></script>
-<script id="wp-a11y-js-translations">
-( function( domain, translations ) {
-	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
-	localeData[""].domain = domain;
-	wp.i18n.setLocaleData( localeData, domain );
-} )( "default", {"translation-revision-date":"2023-11-24 12:26:36+0000","generator":"GlotPress\/4.0.0-alpha.11","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_GB"},"Notifications":["Notifications"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
-</script>
-<script src="https://alanbick.co.uk/wp-includes/js/dist/a11y.min.js?ver=7032343a947cfccf5608" id="wp-a11y-js"></script>
-<script defer='defer' src="https://alanbick.co.uk/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.7.17" id="gform_placeholder-js"></script>
-<script defer='defer' src="https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=4ef53fe41c14a48b294541d9fc37387e" id="gform_gravityforms_theme_vendors-js"></script>
-<script id="gform_gravityforms_theme-js-extra">
-var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"3c41d9fd32af62f81893e9fe0bc01059"}}},"hmr_dev":"","public_path":"https:\/\/alanbick.co.uk\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/"};
-</script>
-<script defer='defer' src="https://alanbick.co.uk/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=f4d12a887a23a8c5755fd2b956bc8fcf" id="gform_gravityforms_theme-js"></script>
-<script src="https://alanbick.co.uk/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
-<script id="popup-maker-site-js-extra">
-var pum_vars = {"version":"1.18.2","pm_dir_url":"https:\/\/alanbick.co.uk\/wp-content\/plugins\/popup-maker\/","ajaxurl":"https:\/\/alanbick.co.uk\/wp-admin\/admin-ajax.php","restapi":"https:\/\/alanbick.co.uk\/wp-json\/pum\/v1","rest_nonce":null,"default_theme":"36759","debug_mode":"","disable_tracking":"","home_url":"\/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","analytics_route":"analytics","analytics_api":"https:\/\/alanbick.co.uk\/wp-json\/pum\/v1"};
-var pum_sub_vars = {"ajaxurl":"https:\/\/alanbick.co.uk\/wp-admin\/admin-ajax.php","message_position":"top"};
-var pum_popups = {"pum-36768":{"triggers":[{"type":"auto_open","settings":{"cookie_name":["pum-36768"],"delay":"500"}}],"cookies":[{"event":"on_popup_close","settings":{"name":"pum-36768","key":"","session":null,"path":true,"time":"1 month"}},{"event":"form_submission","settings":{"form":"gravityforms_2","name":"pum-36768","time":"1 month","only_in_popup":true,"path":true}}],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"36760","size":"small","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":36768,"slug":"popup"}};
-</script>
-<script src="//alanbick.co.uk/wp-content/uploads/pum/pum-site-scripts.js?defer&amp;generated=1698755016&amp;ver=1.18.2" id="popup-maker-site-js"></script>
+<script src="https://alanbick.co.uk/wp-content/plugins/woocommerce-google-analytics-integration/assets/js/build/actions.js?ver=0f331803c6ed53f6a9d3" id="woocommerce-google-analytics-integration-actions-js"></script>
 <script src="https://widget.reviews.co.uk/rich-snippet/dist.js?ver=6.4.2" id="reviewsio-rich-snippet-js"></script>
 <!-- WooCommerce JavaScript -->
 <script type="text/javascript">
@@ -1191,14 +1094,6 @@ jQuery(function($) {
 				});
 			})();
  });
-</script>
-<script>
-gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 2) {if(typeof Placeholders != 'undefined'){
-                        Placeholders.enable();
-                    }} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
-</script>
-<script>
-gform.initializeOnLoaded( function() {jQuery(document).trigger('gform_post_render', [2, 1]);gform.utils.trigger({ event: 'gform/postRender', native: false, data: { formId: 2, currentPage: 1 } });} );
 </script>
 <script type='text/javascript'>
 document.tidioChatCode = "l5w61er8bnyvvr9mtgskovcks2voutjd";
@@ -1227,4 +1122,4 @@ document.tidioChatCode = "l5w61er8bnyvvr9mtgskovcks2voutjd";
 </body>
 
 </html>
-<!-- Cache served by breeze CACHE - Last modified: Mon, 08 Jan 2024 15:53:38 GMT -->
+<!-- Cache served by breeze CACHE - Last modified: Mon, 15 Jan 2024 14:21:23 GMT -->
